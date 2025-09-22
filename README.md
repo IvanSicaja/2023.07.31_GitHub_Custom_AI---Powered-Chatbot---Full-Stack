@@ -46,11 +46,7 @@ This concept is for local use only, and significantly improved **training data**
 
 **Python, Feedforward Neural Network, Natural Language Processing (NLP), SQL, Pandas, TensorFlow, Keras, Scikit-learn, Git, GitHub, Docker Desktop, Docker Hub, Kubernetes, Minikube, Namecheap, HTML, CSS, Bootstrap, JavaScript, Flask, Jinja2, Linux, Similarity search, AI Image Generation (Adobe Firefly, Playground.com)**
 
----
 
-### 📸 Project Snapshot
-
-<p align="center">
 ---
 
 ### 📸 Project Snapshot
