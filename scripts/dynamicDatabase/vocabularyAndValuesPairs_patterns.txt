@@ -1,0 +1,12 @@
+0 - greetings
+1 - how_do_you_know_my_name
+2 - bot_is_intelligent
+3 - jersey
+4 - funny_video
+5 - music
+6 - luka_modric
+7 - chatbot_name
+8 - chatbot_age
+9 - you_are_baby
+10 - great_job
+11 - goodbye

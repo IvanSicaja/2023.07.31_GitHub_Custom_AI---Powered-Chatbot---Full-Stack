@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customaichatbot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customaichatbot
+  template:
+    metadata:
+      labels:
+        app: customaichatbot
+    spec:
+      containers:
+      - name: customaichatbot
+        image: ivansicaja/customaichatbot:1.3.1 # Replace with your image name and tag
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: chatbot-db-volume
+          mountPath: /app/instance/chatbot.db  # Mount the database file inside the container
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "500m"
+      volumes:
+      - name: chatbot-db-volume
+        hostPath:
+          path: /mnt/data/chatbot.db  # Replace with the path to your host directory containing chatbot.db
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customaichatbot-service
+spec:
+  selector:
+    app: customaichatbot
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+      nodePort: 30007  # Optional: Specify a nodePort or let Kubernetes assign one
+  type: NodePort
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: customaichatbot-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: customaichatbot
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50

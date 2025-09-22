@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/duotone.min.css">
+
+
+
+
+
+    <style>
+body {
+font-family: "Montserrat", sans-serif;
+background-color: rgb(52, 53, 65);
+color: #f0f0f0;
+position: relative;
+min-height: 100vh;
+margin: 0;
+}
+
+.center-text {
+text-align: center;
+}
+
+.ul-container, .form-container, h1{
+width: 40%;
+margin: 0 auto;
+}
+
+.ul-container {
+text-align: center;
+height: calc(100vh - 68px - 58px); /* Adjust for other container heights including the form */
+overflow: hidden; /* Hide overflow */
+}
+
+.scroll-container {
+max-height: 700px; /* Set a specific height for the scroll container */
+overflow-y: auto; /* Add a vertical scrollbar when necessary */
+
+}
+
+.form-container {
+position: fixed;
+bottom: 10px;
+left: 0;
+right: 0;
+}
+
+.ul-container ul {
+list-style-type: none;
+padding: 0; /* Remove default padding */
+}
+
+.button-below {
+width: 100%;
+margin-top: 5px;
+background-color: rgb(68, 70, 84);
+border-radius: 5px;
+}
+
+.input-group.mb-3 {
+margin-bottom: 5px;
+}
+
+.telegram-button {
+height: 38px;
+width: 60px;
+border-radius: 5px;
+background-color: rgb(25, 195, 125);
+margin-left: 10px;
+}
+
+.telegram-button i {
+color: #f0f0f0;
+font-size: 23px;
+text-align: center;
+}
+
+.message-container {
+display: flex;
+align-items: center; /* Vertically center align items within the message container */
+margin-bottom: 10px; /* Add a 10px gap between messages */
+}
+
+ul {
+margin-right: 10px;
+}
+
+.message-container li {
+display: flex;
+align-items: center; /* Vertically center align items within the li element */
+width: calc(100% - 20px); /* Make li elements fit within the scroll container, considering the margins */
+margin-bottom: 10px; /* Add a 10px gap between li elements */
+}
+
+}
+
+
+#inputMessage{
+background-color: rgb(25, 195, 125);
+}
+
+#messageList > li:last-child {
+opacity: 0;
+animation: fadeIn 1.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+h1 {
+font-size:55px;
+height:70px;
+}
+
+.icon{
+background-color: rgb(68, 70, 84);
+margin-right: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: auto; /* Adjust the height as needed */
+font-size: 100%;
+min-width: 11%;
+height:80px;
+width:80px;
+min-height:80px;
+min-width:80px;
+border-radius: 10px;
+}
+
+#inputImage{
+
+width:100%;
+height:100%;
+border-radius: 10px;
+}
+
+#outputImage{
+
+width:100%;
+height:100%;
+border-radius: 10px;
+}
+
+.message-text {
+background-color: rgb(68, 70, 84);
+text-align: left;
+padding: 20px; /* Add 20px padding */
+padding-top:28px;
+padding-bottom: 28px;
+
+border-radius: 10px; /* Add rounded rectangle edges */
+word-wrap: break-word; /* Wrap text to the next line if it exceeds width */
+max-width: 85%;
+min-height:80px;
+}
+
+.youTubeShorts,.message-text,.media-container {
+        min-width:0px !important;
+    }
+
+/* RESPONSIVE DESIGN */
+
+/* Media query for screens smaller than a certain width (e.g., 1340px) */
+@media (max-width: 1340px) {
+.header, .ul-container, .form-container {
+width: 65%; /* Set the width to 100% for screens smaller than 1340px */
+}
+}
+
+/* Media query for screens smaller than a certain width (e.g., 1340px) */
+@media (max-width: 850px) {
+.header, .ul-container, .form-container {
+width: 90%; /* Set the width to 100% for screens smaller than 1340px */
+}
+}
+
+/* Media query for screens smaller than a certain width (e.g., 1340px) */
+@media (max-width: 600px) {
+h1 {
+    font-size: 40px;
+
+}
+}
+
+/* Media query for screens smaller than a certain width (e.g., 1340px) */
+@media (max-width: 440px) {
+h1 {
+    height:120px;
+}
+
+}
+
+    </style>
+</head>
+<body d-flex align-items-center justify-content-center>
+    <h1 class="header center-text pt-3 mb-4">Custom AI Chatbot</h1>
+    <div class="ul-container">
+        <div class="scroll-container">
+            <ul id="messageList">
+                <!-- Your list items go here -->
+
+                {% for index, (input_message, output_message, output_message_media) in messages %}
+                <li class="message-container">
+                    <div class="icon">
+                        <a href="https://www.freepik.com/icon/people_6770506#fromView=resource_detail&position=8" alt="Icon by rizal2109">
+                       <img id="inputImage" src="static/baby_418x418.png" alt="Head baba icon">
+                            </a>
+                    </div>
+                    <div class="message-text" id="inputMessage">{{ input_message }}</div>
+                </li>
+                <li class="message-container" id="output" >
+                    <div class="icon">
+                      <a href="https://www.freepik.com/icon/people_6770506#fromView=resource_detail&position=8" alt="Icon by rizal2109">
+                       <img id="outputImage" src="static/AIbot_418x418.png" alt="Head baba icon">
+                            </a></div>
+
+
+                    <div class="message-text" id="outputMessage{{ index }}" class="fade-in">
+    {{ output_message }}
+
+    <div class="media-container d-flex justify-content-center align-items-center">
+        {% if 'youTubeVideo' in output_message_media %}
+            {% set video_id = output_message_media['youTubeVideo'] %}
+            <iframe class="youTubeVideo mt-4" src="https://www.youtube.com/embed/{{ video_id }}?start=104" width="95%" frameborder="0" allowfullscreen></iframe>
+        {% elif 'youTubeShorts' in output_message_media %}
+            {% set shorts_id = output_message_media['youTubeShorts'] %}
+            <iframe class="youTubeShorts mt-4" src="https://www.youtube.com/embed/{{ shorts_id }}?" width="50%" allowfullscreen></iframe>
+        {% elif 'image' in output_message_media %}
+            {% set image_path = output_message_media['image'] %}
+            <img class="image mt-4" src="{{ image_path }}" alt="Image" style="width: 95%; height: auto; max-width: 100%;">
+        {% endif %}
+    </div>
+</div>
+
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form action="#" method="post">
+            <div class="input-group mb-3">
+                <input type="text" name="nm" class="form-control" placeholder="Enter your message">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary telegram-button">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <button id="resetButton" class="btn btn-primary button-below" >
+            Clear chat history
+        </button>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="static/index.js"></script>
+</body>
+</html>

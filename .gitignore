@@ -1,0 +1,8 @@
+.idea/ 
+.venv/
+0.0_Archive/
+1.0_Development/.idea/ 
+1.0_Development/__pycache__/ 
+2.0_Docker/.idea/ 
+2.1_Docker/.idea/ 
+2.1_Docker/__pycache__/ 

@@ -1,0 +1,66 @@
+cd C:\Users\Sicaja\Desktop\SmartCodeACADEMY\0.0_Channel_topics\3_AI_Chatbot\2.1_Docker
+
+docker login
+docker images -a
+docker build --no-cache -t ivansicaja/customaichatbot:1.3.1 .
+docker images -a
+docker run ivansicaja/customaichatbot:1.3.1
+
+@FOR /F "tokens=*" %i IN ('minikube docker-env') DO @%i
+minikube start --driver=docker
+minikube status
+minikube image load ivansicaja/customaichatbot:1.3.1
+
+minikube mount C:\Users\Sicaja\Desktop\SmartCodeACADEMY\0.0_Channel_topics\3_AI_Chatbot\2.1_Docker\instance:/mnt/data
+minikube ssh
+cd /mnt/data
+ls -l
+
+docker
+kubectl apply -f deployment.yaml
+
+kubectl get deployments
+kubectl get services
+kubectl get nodes
+kubectl get pods
+minikube service customaichatbot-service
+
+Hi
+Hi Ivan
+
+How do you know my name?
+Also I know that you are 26 years old and living in the village with the name Pidriš.
+
+You are so intelligent.
+Not really. You added thosse info in the my training database, and I am just repeating it like a idiot. ;)
+
+Can you please design the football jersey for my village. We applied for the football tournament in our city.
+
+Show me something funny on the YouTube.
+
+
+Which kind of the music are you listening?
+2Cellos, it is awesome Croatian duo. Try to listen Vilo Moja and Ne dirajte mi ravnicu at the following link: https://www.youtube.com/watch?v=DmTCP0PZMfg
+
+And I suppose your favorite football player is Luka Modrić? :)
+Yes :), together with Zlatan Ibrahimović and Ivan Perišić. Bdw. you trained me to tell you this. :)
+
+Bdw. what is your name?
+Baltazar.
+
+How old are you?
+I am 1 day old.
+
+You are still a baby :p
+You need to go to work :P
+
+You are doing the great job.
+I would say not great, but good enough, since my training database is small. When I get the bigger database I will perform the tasks even better.
+
+
+I was funny to chat with you! See you later, Baltazar!
+
+start minikube dashboard
+kubectl get pods
+kubectl get hpa
+
