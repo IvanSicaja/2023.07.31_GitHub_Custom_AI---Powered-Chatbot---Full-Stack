@@ -59,35 +59,35 @@ This concept is for local use only, and significantly improved **training data**
   <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_1.png?raw=true" 
        alt="Chatbot Interface Preview 1" 
        width="640" 
-       height="360">
+       height="1000">
 </p>
 
 <p align="center">
   <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_2.png?raw=true" 
        alt="Chatbot Interface Preview 2" 
        width="640" 
-       height="360">
+       height="1000">
 </p>
 
 <p align="center">
   <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_3.png?raw=true" 
        alt="Chatbot Interface Preview 3" 
        width="640" 
-       height="360">
+       height="1000">
 </p>
 
 <p align="center">
   <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_4.png?raw=true" 
        alt="Chatbot Interface Preview 4" 
        width="640" 
-       height="360">
+       height="1000">
 </p>
 
 <p align="center">
   <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_5.png?raw=true" 
        alt="Chatbot Interface Preview 5" 
        width="640" 
-       height="360">
+       height="1000">
 </p>
 
 ---
@@ -104,7 +104,6 @@ This concept is for local use only, and significantly improved **training data**
 </p>
 
 ---
-
 
 
 ### 📣 Hashtags Section
