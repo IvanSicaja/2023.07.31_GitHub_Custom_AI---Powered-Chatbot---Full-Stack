@@ -3,23 +3,23 @@
 ### 📸 Project Snapshot
 
 <p align="center">
-  <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/master/0.1_GitHub/1.0_Description_4_media_key_messages_%26_captions/2.0_Thumbnail_1.png?raw=true"
-       alt="Custom AI-Powered Chatbot Preview 1"
-       width="640"
+  <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_1.png?raw=true" 
+       alt="Custom AI Chatbot Preview 1" 
+       width="640" 
        height="360">
 </p>
 
 <p align="center">
-  <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/master/0.1_GitHub/1.0_Description_4_media_key_messages_%26_captions/2.0_Thumbnail_2.png?raw=true"
-       alt="Custom AI-Powered Chatbot Preview 2"
-       width="640"
+  <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_2.png?raw=true" 
+       alt="Custom AI Chatbot Preview 2" 
+       width="640" 
        height="360">
 </p>
 
 <p align="center">
-  <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/master/0.1_GitHub/1.0_Description_4_media_key_messages_%26_captions/2.0_Thumbnail_3.png?raw=true"
-       alt="Custom AI-Powered Chatbot Preview 3"
-       width="640"
+  <img src="https://github.com/IvanSicaja/2023.07.31_GitHub_Custom_AI---Powered-Chatbot---Full-Stack/blob/main/publish/2.0_Thumbnail_3.png?raw=true" 
+       alt="Custom AI Chatbot Preview 3" 
+       width="640" 
        height="360">
 </p>
 
@@ -32,7 +32,7 @@
     <img src="https://img.youtube.com/vi/DtClZqPPPRQ/0.jpg"
          alt="Watch the demo"
          width="640"
-         height="360">
+         height="1000">
   </a>
 </p>
 
